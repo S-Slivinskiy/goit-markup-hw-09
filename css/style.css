@@ -180,9 +180,15 @@ html {
       rgba(0, 0, 0, 0.4)
     ),
     url(../images/top-baner.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
+}
+@media screen and (min-resolution: 2dppx) {
+  .banner {
+    background-image: url(../images/top-baner@2x.jpg);
+  }
 }
 .banner__content {
   height: 600px;
@@ -599,6 +605,12 @@ html {
   height: 465px;
   background-repeat: no-repeat;
   justify-content: center;
+  background-size: cover;
+}
+@media screen and (min-resolution: 2dppx) {
+  .footer__overley {
+    background-image: url(../images/footer-baner@2x.jpg);
+  }
 }
 .footer__header {
   margin: 0 auto;
