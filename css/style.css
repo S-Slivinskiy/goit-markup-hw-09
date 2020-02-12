@@ -70,25 +70,15 @@ html {
   padding-right: 15px;
   align-items: center;
 }
-.user-menu__call::before {
-  content: "";
-  display: inline-block;
-  width: 17px;
-  height: 19px;
-  padding-left: 10px;
-  background-image: url(../images/icon/icon-tell.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+.user-menu__phone-icon {
+  width: 36px;
+  height: 18px;
+  fill: var(--gallery-text-color);
 }
-.user-menu__mail::before {
-  content: "";
-  display: inline-block;
-  width: 22px;
-  height: 14px;
-  padding-left: 10px;
-  background-image: url(../images/icon/icon-mail.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+.user-menu__mail-icon {
+  width: 36px;
+  height: 18px;
+  fill: var(--gallery-text-color);
 }
 .user-menu__call:hover,
 .user-menu__call:focus {
@@ -251,48 +241,28 @@ html {
   justify-content: center;
   align-items: center;
 }
-.about__item--setting::before {
-  display: inline-block;
+.about__item--setting {
   width: 50px;
   height: 50px;
-  content: "";
-  background-image: url(../images/icon/icon-1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  fill: var(--green-choice-and-top-line);
 }
 
-.about__item--money-back::before {
-  display: inline-block;
+.about__item--money-back {
   width: 50px;
   height: 50px;
-  content: "";
-  background-image: url(../images/icon/icon-2.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  fill: var(--green-choice-and-top-line);
 }
 
-.about__item--shipping::before {
-  display: inline-block;
+.about__item--shipping {
   width: 50px;
   height: 50px;
-  content: "";
-  background-image: url(../images/icon/icon-3.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  fill: var(--green-choice-and-top-line);
 }
 
-.about__item--shipping-two::before {
-  display: inline-block;
+.about__item--shipping-two {
   width: 50px;
   height: 50px;
-  content: "";
-  background-image: url(../images/icon/icon-4.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  fill: var(--green-choice-and-top-line);
 }
 .about__list {
   display: flex;
@@ -375,34 +345,45 @@ html {
   flex-wrap: wrap;
 }
 .card__icon {
-  margin: 0;
-  padding: 0;
   background-color: transparent;
-  border: 1px solid #ffffff;
   transition: background-color 250ms var(--timing-fn);
-  background-size: 65%;
   background-repeat: no-repeat;
   background-position: center;
 }
 .card__icon--like {
-  background-image: url(../images/icon/gallery-icon-1.svg);
   width: 50px;
   height: 50px;
+  padding: 10px;
+  fill: var(--gallery-text-color);
 }
 .card__icon--share {
-  background-image: url(../images/icon/gallery-icon-2.svg);
   width: 50px;
   height: 50px;
+  padding: 10px;
+  fill: var(--gallery-text-color);
 }
 .card__icon--clock {
-  background-image: url(../images/icon/gallery-icon-3.svg);
   width: 50px;
   height: 50px;
+  padding: 10px;
+  fill: var(--gallery-text-color);
 }
 .card__icon--cart {
-  background-image: url(../images/icon/gallery-icon-4.png);
-  width: 164px;
+  width: 50px;
   height: 50px;
+  padding: 10px;
+  fill: var(--gallery-text-color);
+}
+.card__icon:nth-child(4n) {
+  width: 164px;
+}
+.card__icon--text {
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: var(--other-font);
+  font-size: 14px;
+  color: var(--gallery-text-color);
 }
 .card__list {
   list-style-type: none;
@@ -489,12 +470,13 @@ html {
   opacity: 0;
   transition: opasity 250ms var(--timing-fn) 250ms;
 }
-.card__actions button {
+.card__icon {
+  display: flex;
   margin: 0;
   padding: 0;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--gallery-text-color);
 }
-.card__actions button:nth-child(3n) {
+.card__icon:nth-child(3n) {
   margin-right: 0px;
 }
 .card__link::before {
@@ -523,8 +505,8 @@ html {
   background-color: var(--green-choice-and-top-line);
   cursor: pointer;
 }
-.card__icon--cart:hover,
-.card__icon--cart:focus {
+.card__icon:nth-child(4n):hover,
+.card__icon:nth-child(4n):focus {
   background-color: var(--dark-gray);
   cursor: pointer;
 }
@@ -638,7 +620,7 @@ html {
   margin: auto;
   margin-top: 25px;
   margin-bottom: 25px;
-  background-image: url(../images/icon/main-line-wight.png);
+  background-image: url(../images/icon/line-wight.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -675,10 +657,14 @@ html {
   border-radius: 0 5px 5px 0;
   border: 2px solid #ffffff;
   background-color: var(--green-blog-blog-and-focus);
-  background-image: url(../images/icon/enter-mail.png);
   background-repeat: no-repeat;
   background-position: center;
   transition: background-color 250ms var(--timing-fn);
+}
+.footer__button--icon {
+  width: 77px;
+  height: 53px;
+  fill: var(--gallery-text-color);
 }
 .footer__button:hover,
 .footer__button:focus {
